@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'EntypoRegular';
+    src: url('chrome-extension://__MSG_@@extension_id__/font/entypo-webfont.eot');
+    src: url('chrome-extension://__MSG_@@extension_id__/font/entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('chrome-extension://__MSG_@@extension_id__/font/entypo-webfont.woff') format('woff'),
+         url('chrome-extension://__MSG_@@extension_id__/font/entypo-webfont.ttf') format('truetype'),
+         url('chrome-extension://__MSG_@@extension_id__/font/entypo-webfont.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#chrome-guidelines {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.chrome-guidelines-scale {
+	position: fixed;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	z-index: 1000000;
+}
+
+.chrome-guidelines-scale-h {
+	width: 100%;
+	height: 10px;
+	margin-left: 20px;
+	background: url("chrome-extension://__MSG_@@extension_id__/img/scale-h.png") left top repeat-x;
+}
+
+.chrome-guidelines-scale-v {
+	width: 10px;
+	height: 100%;
+	margin-top: 20px;
+	background: url("chrome-extension://__MSG_@@extension_id__/img/scale-v.png") left top repeat-y;
+}
+
+.chrome-guidelines-scale-type {
+	position: absolute;
+	width: 80px;
+	height: 10px;
+	opacity: 0;
+	-webkit-transition: opacity .5s;
+	font-size: 11px;
+}
+
+.chrome-guidelines-scale:hover .chrome-guidelines-scale-type {
+	opacity: 1;
+}
+
+.chrome-guidelines-scale-type-h {
+	top: 0;
+	left: 0;
+}
+
+.chrome-guidelines-scale-type-v {
+	top: 0;
+	left: -80px;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	-webkit-transform-origin: right top;
+	transform-origin: right top;
+}
+
+.chrome-guidelines-nav-btn {
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left: 0;
+	border: none;
+	cursor: pointer;
+	z-index: 1000000;
+	font-family: 'EntypoRegular';
+	font-size: 35px;
+	color: #B31313;
+	line-height: 10px;
+	-webkit-transition: box-shadow .5s;
+	transition: text-shadow .5s;
+}
+
+.chrome-guidelines-nav-btn:hover, .chrome-guidelines-nav-btn-active {
+	text-shadow: 0 0 5px #fff;
+}
+
+.chrome-guidelines-nav-btn:before {
+	display: inline;
+	content: "[";
+}
+
+.chrome-guidelines-line {
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	-webkit-transition: background .5s;
+	z-index: 1000001;
+}
+
+.chrome-guidelines-line:before {
+	content: "";
+	display: block;
+}
+
+.chrome-guidelines-line:not(.moving):hover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.chrome-guidelines-line-h {
+	width: 100%;
+	height: 5px;
+}
+
+.chrome-guidelines-line-h:before {
+	width: 100%;
+	height: 1px;
+	margin-top: 2px;
+}
+
+.chrome-guidelines-line-v {
+	width: 5px;
+	height: 100%;
+}
+
+.chrome-guidelines-line-v:before {
+	width: 1px;
+	height: 100%;
+	margin-left: 2px;
+}
+
+.chrome-guidelines-line-abs {
+	position: absolute;
+}
+
+.chrome-guidelines-line-abs:before {
+	background: red;
+}
+
+.chrome-guidelines-line-fix {
+	position: fixed;
+}
+
+.chrome-guidelines-line-fix:before {
+	background: green;
+}
+
+.chrome-guidelines-hidden {
+	display: none;
+}
